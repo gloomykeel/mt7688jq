@@ -1,7 +1,7 @@
-Index: linux-4.14.106/drivers/usb/core/generic.c
+Index: linux-4.14.95/drivers/usb/core/generic.c
 ===================================================================
---- linux-4.14.106.orig/drivers/usb/core/generic.c
-+++ linux-4.14.106/drivers/usb/core/generic.c
+--- linux-4.14.95.orig/drivers/usb/core/generic.c
++++ linux-4.14.95/drivers/usb/core/generic.c
 @@ -100,13 +100,13 @@ int usb_choose_configuration(struct usb_
  		 * cause us to reject configurations that we should have
  		 * accepted.

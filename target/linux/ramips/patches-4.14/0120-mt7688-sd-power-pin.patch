@@ -1,7 +1,7 @@
-Index: linux-4.14.106/drivers/mmc/host/mtk-mmc/sd.c
+Index: linux-4.14.95/drivers/mmc/host/mtk-mmc/sd.c
 ===================================================================
---- linux-4.14.106.orig/drivers/mmc/host/mtk-mmc/sd.c
-+++ linux-4.14.106/drivers/mmc/host/mtk-mmc/sd.c
+--- linux-4.14.95.orig/drivers/mmc/host/mtk-mmc/sd.c
++++ linux-4.14.95/drivers/mmc/host/mtk-mmc/sd.c
 @@ -188,7 +188,7 @@ struct msdc_hw msdc0_hw = {
  	.clk_drv        = 4,
  	.cmd_drv        = 4,
