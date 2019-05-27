@@ -234,17 +234,18 @@
 		compatible = "ti,tca6416";
 		reg = <0x20>;
 		gpio-controller;
+		interrupt-parent = <&gpio0>;
+		interrupts = <15>;
+		irq-gpio = <15>;
 		#gpio-cells = <2>;
-		//interrupt-parent = <&intc>;
-		//interrupts = <6>;
 	};
 	sc16is752-i2c@48 {
 		#address-cells = <1>;
 		#size-cells = <1>;
 		compatible = "nxp,sc16is752";
 		reg = <0x48>;
-		//clocks = <&clk20m>;
-		interrupts = <&gpio0 15>;
+		clk-freq = <1843200>;
+		irq-gpio = <14>;
 		gpio-controller;
 		#gpio-cells = <2>;
 	};
