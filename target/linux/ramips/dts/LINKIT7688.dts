@@ -48,9 +48,10 @@
 
 	gpio-i2c-uart { 
 		compatible = "i2c-gpio";
-		gpios = <&gpio0 16 1 /* sda*/ 
-			&gpio0 17 1 /* scl*/ >; 
-		//i2c-gpio,delay-us = <10>;	/* ~20 kHz */
+		gpios = <&gpio0 16 1 // sda
+			&gpio0 17 1 // scl
+			 >; 
+		//i2c-gpio,delay-us = <10>;	// ~20 kHz 
 		#address-cells = <1>;
 		#size-cells = <0>;
 		
@@ -59,8 +60,8 @@
 			#size-cells = <1>;
 			compatible = "nxp,sc16is752";
 			reg = <0x48>;
-			//clocks = <&clk20m>;
-			interrupts = <&gpio0 15>;
+			clk-freq = <1843200>;
+			irq-gpio = <14>;
 			gpio-controller;
 			#gpio-cells = <2>;
 		};*/
@@ -238,6 +239,10 @@
 		interrupts = <15>;
 		irq-gpio = <15>;
 		#gpio-cells = <2>;
+<<<<<<< Updated upstream
+=======
+		irq-gpio = <11>;
+>>>>>>> Stashed changes
 	};
 	sc16is752-i2c@48 {
 		#address-cells = <1>;
@@ -246,6 +251,10 @@
 		reg = <0x48>;
 		clk-freq = <1843200>;
 		irq-gpio = <14>;
+<<<<<<< Updated upstream
+=======
+		interrupts = <&gpio0 14>;
+>>>>>>> Stashed changes
 		gpio-controller;
 		#gpio-cells = <2>;
 	};
