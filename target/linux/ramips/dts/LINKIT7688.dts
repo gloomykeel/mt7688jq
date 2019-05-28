@@ -46,7 +46,7 @@
 		};
 	};*/
 
-	gpio-i2c-uart { 
+	/*gpio-i2c-uart { 
 		compatible = "i2c-gpio";
 		gpios = <&gpio0 16 1 // sda
 			&gpio0 17 1 // scl
@@ -55,7 +55,7 @@
 		#address-cells = <1>;
 		#size-cells = <0>;
 		
-		/*sc16is752@48 {
+		sc16is752@48 {
 			#address-cells = <1>;
 			#size-cells = <1>;
 			compatible = "nxp,sc16is752";
@@ -64,9 +64,9 @@
 			irq-gpio = <14>;
 			gpio-controller;
 			#gpio-cells = <2>;
-		};*/
+		};
 		 
-	};
+	};*/
 
 	gpio-i2c { 
 		compatible = "i2c-gpio";
@@ -234,15 +234,9 @@
 	tca6416@20 {
 		compatible = "ti,tca6416";
 		reg = <0x20>;
-		gpio-controller;
-		interrupt-parent = <&gpio0>;
-		interrupts = <15>;
-		irq-gpio = <15>;
-		#gpio-cells = <2>;
-<<<<<<< Updated upstream
-=======
 		irq-gpio = <11>;
->>>>>>> Stashed changes
+		gpio-controller;
+		#gpio-cells = <2>;
 	};
 	sc16is752-i2c@48 {
 		#address-cells = <1>;
@@ -251,10 +245,6 @@
 		reg = <0x48>;
 		clk-freq = <1843200>;
 		irq-gpio = <14>;
-<<<<<<< Updated upstream
-=======
-		interrupts = <&gpio0 14>;
->>>>>>> Stashed changes
 		gpio-controller;
 		#gpio-cells = <2>;
 	};
